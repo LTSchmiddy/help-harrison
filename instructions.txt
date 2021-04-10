@@ -1,0 +1,28 @@
+Program Description:
+ 
+1. [50%] A list of jobs and salaries were compiled in a text file by an internet job service company (file is attached). Write a program that uses a loop to read the job titles and salary ranges from this file and store the jobs and salary ranges into two arrays (use string and double as variable types respectively). The maximum number of jobs that can be processed by this program is 20. When done, the C++ program should:
+ 
+a. Calculate and display the average salary of the different jobs avg=(low + high)/2.0 into a one dimensional array (avgSalaries[]) . [10]
+b. Identify and display the lowest and highest average salary from avgSalaries[] (include job titles).[10]
+c. Sort all the jobs in average salary order and then display the sorted jobs with salary ranges and corresponding average salary.[20]
+d. Provide the user with the option to write all calculated results of part a, b and c to the console OR to the output file”job-stat.txt”.[10]
+ 
+2. [50%] Rewrite Part 1 C++ Program using the following function prototypes:
+ 
+a. void geData(ifstream &inFile, string jobs[],double salaryRange[][2], int &numJobs); //Reads input data
+- inFile is the ifstream object associated with the input file.
+- one-dimensional array jobs[] will store job titles
+- two-dimensional array salaryRange[][2] will store salary ranges for each job.
+-numJobs will be determined based on the number of jobs read.
+b. double getAverage(double lowSalary, highSalary); //Returns the average salary from low and high salary range.
+   -use this function to calculate each job average and store result
+     into a one-dimensional array avgSalary[]
+c. void getLowestAndHighestAvgSalary(double avgSalary[], int &lowest_index, int &highest_index); //finds index of the job with highest average and index of the job with lowest average salary.
+d. void sortByAvgSalary(string jobs[],double salaryRange[][2],avgSalary[],int numOfJobs); //Sorts in ascending order the arrays by average salary.
+e. Void display(string jobs[], double salaryRange[][2],double avgSalary[], int numOfJobs); //Display results on screen
+f. void generateFileReport(ofstream &outFile, string jobs[],double salaryRange[][2],double avgSalary[], int numOfJobs);//Writes results to output file – Note that file is opened and closed in main()
+
+ 
+NOTE:
+• No non-constant global variables should be used.
+• No Pointers should be used in solution.
